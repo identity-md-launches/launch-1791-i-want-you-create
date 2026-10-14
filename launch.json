@@ -1,0 +1,10 @@
+{
+  "kind": "evm_contracts",
+  "contracts": [
+    {
+      "contract": "USDCDepositClaim",
+      "constructorArgs": ["$owner"]
+    }
+  ],
+  "notes": "USDCDepositClaim uses Ethereum USDC at 0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48. The constructor assigns ownership to $owner. After approving USDC spending, only the owner can deposit funds from their wallet for a recipient; repeated deposits add to that recipient's balance. Only the credited wallet can claim its full balance to itself, clearing its credit on success. Amounts use USDC base units (six decimals). Ownership transfers require acceptance by the new owner; renunciation is disabled."
+}
